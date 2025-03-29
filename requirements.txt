@@ -1,4 +1,3 @@
-echo -e "Flask\ntensorflow\nPillow" > requirements.txt
-git add requirements.txt
-git commit -m "Add requirements.txt"
-git push origin main
+flask
+tensorflow
+pillow
