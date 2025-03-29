@@ -1,0 +1,4 @@
+echo -e "services:\n  - type: web\n    name: skincare-api\n    env: python\n    buildCommand: \"\"\n    startCommand: python app.py\n    plan: free" > render.yaml
+git add render.yaml
+git commit -m "Add render.yaml for Render deployment"
+git push origin main
