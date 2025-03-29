@@ -1,10 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 import os
 
 app = Flask(__name__)
+CORS(app)
 
 # Load model once when the app starts
 MODEL_PATH = "skin_model.h5"
@@ -24,6 +26,8 @@ CLASS_NAMES = sorted([
 def predict():
     if "image" not in request.files:
         return jsonify({"error": "No image provided"}), 400
+    
+    print("📥 Received image for prediction")
 
     img_file = request.files["image"]
     img_path = os.path.join("temp.jpg")
