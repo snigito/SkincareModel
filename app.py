@@ -41,7 +41,7 @@ def predict():
     # Predict
     print("🔍 Making prediction...")
     predictions = model.predict(img_array)[0]
-    top_indices = predictions.argsort()[::-1][:5]
+    top_indices = predictions.argsort()[::-1]
     top_classes = [(CLASS_NAMES[i], float(predictions[i])) for i in top_indices]
 
     return jsonify({
