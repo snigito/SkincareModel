@@ -45,5 +45,5 @@ This project is deployed using **Render**, with the following setup:
 
 ---
 
-*Created by Sean Nigito for a Spring 2025 Hackathon*
+*Created by Sean Nigito and Marvin Mody for a Spring 2025 Hackathon*
 
